@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sym Ventures</title>
+<meta name="description" content="Sym Ventures invests in real estate, apps and websites, and small businesses, and builds apps and websites for others.">
+<link rel="canonical" href="https://symventuresllc.com/">
+<meta property="og:title" content="Sym Ventures">
+<meta property="og:description" content="Real estate, apps and websites, and small businesses. Looking for an investor or need a product built? Let's talk.">
+<meta property="og:url" content="https://symventuresllc.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='24' fill='%232B2B2B'/%3E%3Cg fill='%23C9895F' transform='translate(-1 23)'%3E%3Crect x='10' y='40' width='20' height='8'/%3E%3Crect x='32' y='40' width='20' height='8'/%3E%3Crect x='10' y='52' width='9' height='8'/%3E%3Crect x='21' y='52' width='20' height='8'/%3E%3Crect x='43' y='52' width='9' height='8'/%3E%3Crect x='10' y='64' width='20' height='8'/%3E%3Crect x='32' y='64' width='20' height='8'/%3E%3Crect x='10' y='76' width='9' height='8'/%3E%3Crect x='21' y='76' width='20' height='8'/%3E%3Crect x='43' y='76' width='9' height='8'/%3E%3Crect x='56' y='40' width='8' height='8'/%3E%3Crect x='68' y='40' width='8' height='8' opacity='.8'/%3E%3Crect x='80' y='40' width='8' height='8' opacity='.6'/%3E%3Crect x='92' y='40' width='8' height='8' opacity='.4'/%3E%3Crect x='56' y='52' width='8' height='8'/%3E%3Crect x='68' y='52' width='8' height='8' opacity='.8'/%3E%3Crect x='80' y='52' width='8' height='8' opacity='.6'/%3E%3Crect x='56' y='64' width='8' height='8'/%3E%3Crect x='68' y='64' width='8' height='8' opacity='.8'/%3E%3Crect x='56' y='76' width='8' height='8'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#2B2B2B; --card:#323232; --ink:#EDE6D6; --muted:#BFB8B0; --copper:#C9895F; --line:rgba(201,137,95,.3); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: var(--ink); }
+  a:hover { color: #E0A57E; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; }
+  em { color: var(--copper); }
+
+  header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand svg { width: 46px; height: auto; }
+  .brand span { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; letter-spacing: .18em; }
+  .btn { display: inline-block; text-decoration: none; padding: 14px 26px; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; background: var(--copper); color: var(--bg); }
+  .btn:hover { background: #E0A57E; color: var(--bg); }
+
+  .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding: 96px 0 112px; }
+  .hero > div { flex: 1 1 440px; }
+  .hero h1 { margin: 0; font-size: clamp(44px, 6vw, 80px); line-height: 1.04; }
+  .hero p { margin: 28px 0 0; max-width: 480px; font-size: 18px; color: var(--muted); }
+  .emblem { flex: 1 1 320px; max-width: 460px; aspect-ratio: 1; background: #232323; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; }
+  .emblem svg { width: 70%; }
+
+  .hero p + p { margin-top: 16px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .btn-outline { background: none; border: 1px solid var(--copper); color: var(--copper); }
+  .btn-outline:hover { background: var(--copper); color: var(--bg); }
+  .build { padding-top: 0; }
+  .about strong { color: var(--ink); font-weight: 500; }
+  .contact-text { margin: 0 auto 40px; max-width: 460px; font-size: 17px; color: var(--muted); }
+  .form { max-width: 640px; margin: 0 auto; padding: clamp(24px, 4vw, 40px); background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 20px; text-align: left; }
+  .row { display: flex; flex-wrap: wrap; gap: 16px; }
+  .field { flex: 1 1 220px; display: flex; flex-direction: column; gap: 8px; }
+  .field label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .field input, .field select, .field textarea { width: 100%; background: var(--bg); border: 1px solid #55504A; color: var(--ink); font: inherit; font-size: 16px; padding: 14px 16px; border-radius: 0; }
+  .field input, .field select { height: 52px; padding-top: 0; padding-bottom: 0; }
+  .field textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--copper); }
+  .form button { border: 0; cursor: pointer; font-family: inherit; height: 54px; }
+  .form-status { margin: 0; min-height: 1.6em; font-size: 15px; color: var(--copper); }
+  .focus { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; padding: 48px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .focus h2 { margin: 0 0 10px; font-size: 30px; font-weight: 500; }
+  .focus p { margin: 0; font-size: 15px; color: var(--muted); }
+  .about { display: flex; flex-wrap: wrap; gap: 56px; padding: 112px 0; }
+  .about > div:first-child { flex: 1 1 300px; }
+  .about > div:last-child { flex: 1.4 1 420px; font-size: 17px; line-height: 1.8; color: var(--muted); }
+  .about h2 { margin: 0; font-size: clamp(34px, 4vw, 50px); line-height: 1.1; }
+  .about > div:last-child p { margin: 0 0 18px; }
+  .list .desc { flex-basis: 100%; max-width: 640px; font-size: 15px; line-height: 1.7; color: var(--muted); }
+  .label { margin: 0 0 32px; font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--copper); }
+  .portfolio { padding: 0 0 112px; }
+  .list a { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; padding: 28px 0; border-top: 1px solid var(--line); text-decoration: none; }
+  .list a:last-child { border-bottom: 1px solid var(--line); }
+  .list .name { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 500; }
+  .list .what { font-size: 15px; color: var(--muted); }
+
+  .contact { padding: 0 0 112px; text-align: center; }
+  .contact h2 { margin: 0 0 16px; font-size: clamp(34px, 4.5vw, 52px); }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+  @media (max-width: 640px) {
+    .brand span { font-size: 16px; }
+    header .btn { padding: 12px 16px; }
+    .hero { padding: 48px 0 72px; gap: 40px; }
+    .emblem { aspect-ratio: auto; height: 200px; max-width: none; }
+    .list .name { font-size: 28px; }
+    .about { padding: 72px 0; gap: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="brand" href="#">
+      <svg viewBox="6 36 110 52" fill="#C9895F" aria-hidden="true"><rect x="10" y="40" width="20" height="8"/><rect x="32" y="40" width="20" height="8"/><rect x="10" y="52" width="9" height="8"/><rect x="21" y="52" width="20" height="8"/><rect x="43" y="52" width="9" height="8"/><rect x="10" y="64" width="20" height="8"/><rect x="32" y="64" width="20" height="8"/><rect x="10" y="76" width="9" height="8"/><rect x="21" y="76" width="20" height="8"/><rect x="43" y="76" width="9" height="8"/><rect x="56" y="40" width="8" height="8"/><rect x="68" y="40" width="8" height="8" opacity=".8"/><rect x="80" y="40" width="8" height="8" opacity=".6"/><rect x="92" y="40" width="8" height="8" opacity=".4"/><rect x="104" y="40" width="8" height="8" opacity=".2"/><rect x="56" y="52" width="8" height="8"/><rect x="68" y="52" width="8" height="8" opacity=".8"/><rect x="80" y="52" width="8" height="8" opacity=".6"/><rect x="92" y="52" width="8" height="8" opacity=".4"/><rect x="56" y="64" width="8" height="8"/><rect x="68" y="64" width="8" height="8" opacity=".8"/><rect x="80" y="64" width="8" height="8" opacity=".6"/><rect x="56" y="76" width="8" height="8"/><rect x="68" y="76" width="8" height="8" opacity=".8"/></svg>
+      <span>SYM VENTURES</span>
+    </a>
+    <a class="btn" href="#contact">Contact</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1 class="serif">Built in brick. <em>Scaled in pixels.</em></h1>
+      <p>Sym Ventures is an independent company based in Texas. We invest in real estate, apps and websites, and small businesses, and we also design and build apps and websites for others.</p>
+      <p>Whether you are raising money, selling a property, or need a product built, we would be glad to hear from you.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Share an opportunity</a>
+        <a class="btn btn-outline" href="#build">Build with us</a>
+      </div>
+    </div>
+    <div class="emblem">
+      <svg viewBox="6 36 110 52" fill="#C9895F" role="img" aria-label="Sym Ventures logo"><rect x="10" y="40" width="20" height="8"/><rect x="32" y="40" width="20" height="8"/><rect x="10" y="52" width="9" height="8"/><rect x="21" y="52" width="20" height="8"/><rect x="43" y="52" width="9" height="8"/><rect x="10" y="64" width="20" height="8"/><rect x="32" y="64" width="20" height="8"/><rect x="10" y="76" width="9" height="8"/><rect x="21" y="76" width="20" height="8"/><rect x="43" y="76" width="9" height="8"/><rect x="56" y="40" width="8" height="8"/><rect x="68" y="40" width="8" height="8" opacity=".8"/><rect x="80" y="40" width="8" height="8" opacity=".6"/><rect x="92" y="40" width="8" height="8" opacity=".4"/><rect x="104" y="40" width="8" height="8" opacity=".2"/><rect x="56" y="52" width="8" height="8"/><rect x="68" y="52" width="8" height="8" opacity=".8"/><rect x="80" y="52" width="8" height="8" opacity=".6"/><rect x="92" y="52" width="8" height="8" opacity=".4"/><rect x="56" y="64" width="8" height="8"/><rect x="68" y="64" width="8" height="8" opacity=".8"/><rect x="80" y="64" width="8" height="8" opacity=".6"/><rect x="56" y="76" width="8" height="8"/><rect x="68" y="76" width="8" height="8" opacity=".8"/></svg>
+    </div>
+  </section>
+
+  <p class="label">What we invest in</p>
+  <section class="focus" aria-label="What we invest in">
+    <div>
+      <h2 class="serif">Real Estate</h2>
+      <p>Residential and small commercial property, from ready-to-rent homes to places that need some work.</p>
+    </div>
+    <div>
+      <h2 class="serif">Apps &amp; Websites</h2>
+      <p>Early-stage software, from consumer apps to tools for businesses, especially products that solve an everyday problem well.</p>
+    </div>
+    <div>
+      <h2 class="serif">Small Businesses</h2>
+      <p>Local and physical ventures with a clear plan and owners who are ready to grow.</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div>
+      <p class="label">How we work</p>
+      <h2 class="serif">More than <em>a check.</em></h2>
+    </div>
+    <div>
+      <p><strong>Patient capital.</strong> We invest our own money, so there is no fund deadline pushing for a quick exit.</p>
+      <p><strong>Help when you want it.</strong> Our background spans engineering, product and business, so we can roll up our sleeves or stay out of the way.</p>
+      <p><strong>Straightforward.</strong> Clear terms, honest feedback, and a real conversation, even if the answer is no.</p>
+    </div>
+  </section>
+
+  <section id="build" class="about build">
+    <div>
+      <p class="label">Build with us</p>
+      <h2 class="serif">Need an app <em>or a website?</em></h2>
+    </div>
+    <div>
+      <p>We design and build mobile apps, web apps and websites for founders and small businesses, using the same approach we use for our own products.</p>
+      <p><strong>From idea to launch.</strong> We help shape the idea, design it, build it and get it into the App Store or online.</p>
+      <p><strong>Simple and reliable.</strong> Clean, fast products that are easy for your customers to use and easy for you to run.</p>
+      <p><strong>Flexible.</strong> Hire us for a project, or talk to us about building and investing together.</p>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <p class="label">Some of what we've built</p>
+    <div class="list">
+      <a href="https://centverse.app"><span class="name">Centverse</span><span class="what">iOS &amp; Android · Financial literacy</span><span class="desc">Money, made playable. A free app that teaches personal finance through short, game-like missions. No ads, no accounts, and nothing leaves the device.</span></a>
+      <a href="https://rechargedaily.co"><span class="name">Recharge</span><span class="what">SaaS · AI burnout coach</span><span class="desc">A two-minute daily check-in that tracks burnout signals and builds recovery plans, for professionals and their teams.</span></a>
+      <a href="https://forgor.app"><span class="name">Forgor</span><span class="what">iOS · Household reminders</span><span class="desc">One early nudge for the dates that cost you when they slip, like renewals, passports, free trials and birthdays. Then silence.</span></a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="serif">Let's <em>talk.</em></h2>
+    <p class="contact-text">Looking for an investor, or need an app or website built? Tell us about your property, product or business. We read every message.</p>
+    <form id="contact-form" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <p hidden><label>Leave this empty: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+      <div class="row">
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-topic">I'm reaching out about</label>
+        <select id="f-topic" name="topic" required>
+          <option value="">Choose one</option>
+          <option>Investment in my business or product</option>
+          <option>Selling a property</option>
+          <option>Building an app or website</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" rows="5" required></textarea>
+      </div>
+      <button class="btn" type="submit">Send message</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <footer>
+    <span>© 2026 Sym Ventures LLC</span>
+    <span>Texas</span>
+  </footer>
+
+</div>
+<script>
+  // Sends the form to Formspree without leaving the page.
+  // Replace YOUR_FORM_ID in the form's action with the ID from formspree.io.
+  const form = document.getElementById('contact-form');
+  const status = form.querySelector('.form-status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (res.ok) { form.reset(); status.textContent = 'Thank you. We will get back to you soon.'; }
+      else { status.textContent = 'Something went wrong. Please try again.'; }
+    } catch (err) {
+      status.textContent = 'Something went wrong. Please try again.';
+    }
+  });
+</script>
+</body>
+</html>
