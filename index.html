@@ -62,6 +62,7 @@
   .about > div:last-child { flex: 1.4 1 420px; font-size: 17px; line-height: 1.8; color: var(--muted); }
   .about h2 { margin: 0; font-size: clamp(34px, 4vw, 50px); line-height: 1.1; }
   .about > div:last-child p { margin: 0 0 18px; }
+  .work-intro { margin: -16px 0 32px; font-size: 17px; color: var(--muted); }
   .list .desc { flex-basis: 100%; max-width: 640px; font-size: 15px; line-height: 1.7; color: var(--muted); }
   .label { margin: 0 0 32px; font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--copper); }
   .portfolio { padding: 0 0 112px; }
@@ -153,19 +154,20 @@
   </section>
 
   <section class="portfolio">
-    <p class="label">Some of what we've built</p>
+    <p class="label">Our work</p>
+    <p class="work-intro">Products we have designed, built and run ourselves.</p>
     <div class="list">
-      <a href="https://centverse.app"><span class="name">Centverse</span><span class="what">iOS &amp; Android · Financial literacy</span><span class="desc">Money, made playable. A free app that teaches personal finance through short, game-like missions. No ads, no accounts, and nothing leaves the device.</span></a>
-      <a href="https://rechargedaily.co"><span class="name">Recharge</span><span class="what">SaaS · AI burnout coach</span><span class="desc">A two-minute daily check-in that tracks burnout signals and builds recovery plans, for professionals and their teams.</span></a>
-      <a href="https://forgor.app"><span class="name">Forgor</span><span class="what">iOS · Household reminders</span><span class="desc">One early nudge for the dates that cost you when they slip, like renewals, passports, free trials and birthdays. Then silence.</span></a>
+      <a href="https://centverse.app"><span class="name">Centverse</span><span class="what">Mobile app · iOS &amp; Android</span><span class="desc">A game-based learning app for personal finance.</span></a>
+      <a href="https://rechargedaily.co"><span class="name">Recharge</span><span class="what">Web app · SaaS</span><span class="desc">A subscription platform with AI coaching and team dashboards.</span></a>
+      <a href="https://forgor.app"><span class="name">Forgor</span><span class="what">Mobile app · iOS</span><span class="desc">A household reminders app with document scanning and shared accounts.</span></a>
     </div>
   </section>
 
   <section id="contact" class="contact">
     <h2 class="serif">Let's <em>talk.</em></h2>
     <p class="contact-text">Looking for an investor, or need an app or website built? Tell us about your property, product or business. We read every message.</p>
-    <form id="contact-form" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <p hidden><label>Leave this empty: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+    <form id="contact-form" class="form" action="/api/contact" method="POST">
+      <p hidden><label>Leave this empty: <input name="company" tabindex="-1" autocomplete="off"></label></p>
       <div class="row">
         <div class="field">
           <label for="f-name">Name</label>
@@ -202,15 +204,15 @@
 
 </div>
 <script>
-  // Sends the form to Formspree without leaving the page.
-  // Replace YOUR_FORM_ID in the form's action with the ID from formspree.io.
+  // Sends the form to /api/contact (Vercel function → Resend) without leaving the page.
   const form = document.getElementById('contact-form');
   const status = form.querySelector('.form-status');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     status.textContent = 'Sending…';
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      const data = Object.fromEntries(new FormData(form));
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       if (res.ok) { form.reset(); status.textContent = 'Thank you. We will get back to you soon.'; }
       else { status.textContent = 'Something went wrong. Please try again.'; }
     } catch (err) {
